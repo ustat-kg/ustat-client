@@ -13,7 +13,6 @@ export default {
 
 <style>
   #app{
-    position: fixed;
     left: 0;
     top: 0;
     height:auto;
