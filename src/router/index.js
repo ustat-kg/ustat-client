@@ -1,21 +1,41 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import AppLogin from '../pages/AppLogin.vue'
-import MainPage from '../pages/MainPage'
+import MainPage from '../pages/MainPage.vue'
+import SearchPage from '../pages/SearchPage.vue'
+import AppSignup from '../pages/AppSignup.vue'
+import TeachersPage from '../pages/TeachersPage.vue'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
+  base: process.env.BASE_URL,
   routes: [
     {
-      path: '/home',
+      path: '/app-login',
+      name: 'app-login',
+      component: AppLogin
+    },
+    {
+      path: '/main-page',
       name: 'main-page',
       component: MainPage
     },
     {
-      path: '/',
-      name: 'app-login',
-      component: AppLogin
+      path: '/search-page',
+      name: 'search-page',
+      component: SearchPage
+    },
+    {
+      path: '/app-signup',
+      name: 'app-signup',
+      component: AppSignup
+    },
+    {
+      path: '/teachers-page',
+      name: 'teachers-page',
+      component: TeachersPage
     }
   ]
 })

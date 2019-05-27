@@ -3,9 +3,20 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import Vuex from 'vuex'
+import createStore from './store'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import colors from 'vuetify/es5/util/colors'
+import BootstrapVue from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+// import VueAxios from 'vue-axios'
+// Vue.use(VueAxios, axios)
+
+Vue.use(Vuex)
+Vue.use(BootstrapVue)
 Vue.use(Vuetify, {
   theme: {
     secondary: colors.red.lighten4, // #FFCDD2
@@ -13,11 +24,13 @@ Vue.use(Vuetify, {
   }
 })
 
+const store = createStore()
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
   router,
-  // store,
+  store,
+  // axios,
   render: h => h(App)
 }).$mount('#app')
