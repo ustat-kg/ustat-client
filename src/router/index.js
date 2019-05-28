@@ -5,6 +5,8 @@ import MainPage from '../pages/MainPage.vue'
 import SearchPage from '../pages/SearchPage.vue'
 import AppSignup from '../pages/AppSignup.vue'
 import TeachersPage from '../pages/TeachersPage.vue'
+import SchoolSubjects from '../pages/SchoolSubjects.vue'
+import LangSubjects from '../pages/LangSubjects.vue'
 
 Vue.use(Router)
 
@@ -36,6 +38,16 @@ export default new Router({
       path: '/teachers-page',
       name: 'teachers-page',
       component: TeachersPage
+    },
+    {
+      path: '/schoolsubjects-page',
+      name: 'schoolsubjects-page',
+      component: SchoolSubjects
+    },
+    {
+      path: '/langsubjects-page',
+      name: 'langsubjects-page',
+      component: LangSubjects
     }
   ]
 })

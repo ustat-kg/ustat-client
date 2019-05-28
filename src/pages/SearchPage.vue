@@ -40,10 +40,13 @@ export default {
 
 <style scoped>
 .search-page {
-  background-image: url("../assets/bg.png");
+  background-image: url("../assets/images/bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 250px 0;
+  width: 100%;
+  height:100%;
+  overflow: hidden;
 }
 
 .content-box {

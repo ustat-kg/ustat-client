@@ -18,7 +18,7 @@ export default {
 
 <style scoped>
 .app-login {
-  background-image: url('../assets/bg.png');
+  background-image: url('../assets/images/bg.png');
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
