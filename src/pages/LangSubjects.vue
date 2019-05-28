@@ -1,11 +1,16 @@
 <template>
-  <div>Lang</div>
+  <div>
+    <app-search />
+  </div>
 </template>
 
 <script>
+import AppSearch from '../components/AppSearch'
 export default {
-  name: 'langsubjects-page'
-
+  name: 'langsubjects',
+  components: {
+    AppSearch
+  }
 }
 </script>
 

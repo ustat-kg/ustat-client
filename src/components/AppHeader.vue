@@ -20,7 +20,7 @@
               <a href="#">Регистрация</a>
             </li>
             <li>
-              <a href="#">Войти</a>
+              <router-link to='/app-login'>Войти</router-link>
             </li>
           </div>
         </div>
@@ -41,22 +41,20 @@ export default {
 <style scoped>
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 .my-header {
-  height: 100px;
+  height: 80px;
   opacity: 0.7;
   background-color: black;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-  align-items: center;
   position: absolute;
 }
 .my-header-down {
   width: 100%;
-  height: 100%;
+  height: 30px;
   padding: 0px;
   display: flex;
   align-items: center;
+  align-content: center;
+  justify-content: center;
 }
 .logo {
   font-family: "Montserrat", sans-serif;

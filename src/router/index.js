@@ -40,13 +40,13 @@ export default new Router({
       component: TeachersPage
     },
     {
-      path: '/schoolsubjects-page',
-      name: 'schoolsubjects-page',
+      path: '/schoolsubjects',
+      name: 'schoolsubjects',
       component: SchoolSubjects
     },
     {
-      path: '/langsubjects-page',
-      name: 'langsubjects-page',
+      path: '/langsubjects',
+      name: 'langsubjects',
       component: LangSubjects
     }
   ]

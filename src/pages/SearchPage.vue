@@ -9,12 +9,7 @@
     </div>
     <div class="row">
       <div class="col-6 offset-4 md-8 sm-10 xs-12 ">
-        <form class="subject-search">
-          <label for="subject-name" class="label-text">Напишите что Вы хотели бы изучать?</label>
-          <br>
-          <input type="search" name="subject" id="subject" class="subject" placeholder="английский">
-          <button class="search-my-button" type>Найти</button>
-        </form>
+        <app-search />
       </div>
     </div>
   </div>
@@ -25,12 +20,14 @@
 <script>
 import AppHeader from '../components/AppHeader'
 import AppSubjects from '../components/AppSubjects'
+import AppSearch from '../components/AppSearch'
 // import AppFooter from '../components/AppFooter'
 export default {
   name: 'search-page',
   components: {
     AppHeader,
-    AppSubjects
+    AppSubjects,
+    AppSearch
   },
   data () {
     return {}

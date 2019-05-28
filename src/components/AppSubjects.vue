@@ -10,7 +10,7 @@
             :key="index"
             :to="subjectCard.route"
             >
-            <h3>{{subjectCard.name}}</h3>
+            <h3 class="title">{{subjectCard.name}}</h3>
           </router-link>
         </div>
       </div>
@@ -34,17 +34,17 @@ export default {
         {
           name: 'Школьные предметы',
           img: image1,
-          route: '/schoolsubjects-page'
+          route: '/schoolsubjects'
         },
         {
           name: 'Иностранные языки',
           img: image2,
-          route: '/langsubjects-page'
+          route: '/langsubjects'
         },
         {
           name: 'Творчество',
           img: image3,
-          route: '/artsubjects-page'
+          route: '/artsubjects'
         },
         {
           name: 'Повышение квалификации',
@@ -59,7 +59,7 @@ export default {
         {
           name: 'IT-development',
           img: image6,
-          route: '/itsubjects-page'
+          route: '/itsubjects'
         }
       ]
     }
@@ -88,14 +88,15 @@ export default {
   margin-top: 3%;
 }
 
-.subject-card h3 {
+.title {
   font-family: "Montserrat", sans-serif;
   font-weight: bolder;
   color:white;
+  text-decoration: none;
 }
 .subject-card {
   margin: 30px;
   border-radius: 20px;
-
 }
+
 </style>

@@ -5,7 +5,7 @@
 <script>
 
 export default {
-  name: 'schoolsubjects-page'
+  name: 'schoolsubjects'
 }
 </script>
 
