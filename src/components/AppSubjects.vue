@@ -76,6 +76,7 @@ export default {
   align-items: center;
   text-align: center;
   justify-content: center;
+  text-decoration: none;
 
 }
 
@@ -92,7 +93,6 @@ export default {
   font-family: "Montserrat", sans-serif;
   font-weight: bolder;
   color:white;
-  text-decoration: none;
 }
 .subject-card {
   margin: 30px;

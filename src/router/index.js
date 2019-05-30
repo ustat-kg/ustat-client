@@ -7,7 +7,7 @@ import AppSignup from '../pages/AppSignup.vue'
 import TeachersPage from '../pages/TeachersPage.vue'
 import SchoolSubjects from '../pages/SchoolSubjects.vue'
 import LangSubjects from '../pages/LangSubjects.vue'
-
+import Teacher from '../pages/Teacher.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -38,6 +38,12 @@ export default new Router({
       path: '/teachers-page',
       name: 'teachers-page',
       component: TeachersPage
+    },
+    {
+      path: '/teacher/:id',
+      name: 'teacher',
+      props: true,
+      component: Teacher
     },
     {
       path: '/schoolsubjects',

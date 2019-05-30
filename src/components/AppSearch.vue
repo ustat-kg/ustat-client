@@ -1,12 +1,10 @@
 <template>
-  <div>
-    <form class="subject-search">
-      <label for="subject-name" class="label-text">Напишите что Вы ищете?</label>
-      <br>
-      <input type="search" name="subject" id="subject" class="subject" placeholder="английский">
-      <button class="search-my-button" type>Найти</button>
-    </form>
-  </div>
+  <form class="subject-search">
+    <label for="subject-name" class="label-text">Напишите что Вы ищете?</label>
+    <br>
+    <input type="search" name="subject" id="subject" class="subject" placeholder="английский">
+    <button class="search-my-button" type>Найти</button>
+  </form>
 </template>
 
 <script>
@@ -19,7 +17,7 @@ export default {
 .subject-search {
   display: inline-block;
   justify-content: center;
-  margin-top: 5vh;
+  margin-top: 15vh;
 }
 .subject {
   height: 50px;

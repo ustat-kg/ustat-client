@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <transition>
+    <transition name="moveInUp">
       <router-view></router-view>
     </transition>
   </div>
@@ -13,7 +13,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   #app{
     left: 0;
     top: 0;
@@ -26,4 +26,9 @@ export default {
   router-link{
     text-decoration: none;
   }
+  .moveInUp--enter-active{
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
 </style>
