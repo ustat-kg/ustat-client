@@ -4,16 +4,17 @@
       <v-card class="teachers-card">
         <v-container fluid class="teachers-card-down">
           <v-layout row class>
-            <v-flex xs2 md3>
+            <v-flex xs2 md3 class="ava-image-top">
               <v-card-media :src="teacher.avatarImg" class="ava-image"></v-card-media>
             </v-flex>
-            <v-flex xs6 md4 class="title">
-              <v-card-title>
+            <v-flex xs6 md4 >
+              <v-card-title class="title">
                 <div>{{teacher.name}} {{teacher.surname}}</div>
                 <div class="title-short">{{teacher.shortInfo}}</div>
+                <div class='subject'>{{teacher.subject}}</div>
               </v-card-title>
             </v-flex>
-            <v-flex xs4 md4>
+            <v-flex xs4 md4 class>
               <v-card-actions class="teacher-right">
                 <div class="price">{{teacher.price}} сом/ в час</div>
                 <div class="rating">
@@ -63,7 +64,9 @@ export default {
   border-radius: 100%;
   width: 80px;
   height: 80px;
+  margin-left: 8%;
 }
+
 .price {
   font-family: "Montserrat", sans-serif;
   font-weight: bolder;
@@ -94,10 +97,12 @@ export default {
   font-family: "Montserrat", sans-serif;
   font-weight: initial;
   display: flex;
+  justify-content: space-around;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  font-size: 12px;
+  align-items: center;
+  padding: 0px;
+  height:120px;
+  width: 100%;
 }
 .title-short {
   font-family: "Montserrat", sans-serif;
@@ -109,6 +114,12 @@ export default {
 }
 .teachers-card-down {
   padding: 20px;
+}
+.subject {
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  font-size: 10px;
+  margin-left: 70%
 }
 
 </style>

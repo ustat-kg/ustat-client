@@ -1,13 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import AppLogin from '../pages/AppLogin.vue'
+import SignUpPage from '../pages/SignUpPage.vue'
 import MainPage from '../pages/MainPage.vue'
 import SearchPage from '../pages/SearchPage.vue'
-import AppSignup from '../pages/AppSignup.vue'
 import TeachersPage from '../pages/TeachersPage.vue'
 import SchoolSubjects from '../pages/SchoolSubjects.vue'
 import LangSubjects from '../pages/LangSubjects.vue'
 import Teacher from '../pages/Teacher.vue'
+import TotalFilters from '../components/TotalFilters.vue'
+import MyHeader from '../components/MyHeader.vue'
+import Stepper from '../components/Steppers.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -20,6 +23,11 @@ export default new Router({
       component: AppLogin
     },
     {
+      path: '/signup-page',
+      name: 'signup-page',
+      component: SignUpPage
+    },
+    {
       path: '/main-page',
       name: 'main-page',
       component: MainPage
@@ -28,11 +36,6 @@ export default new Router({
       path: '/search-page',
       name: 'search-page',
       component: SearchPage
-    },
-    {
-      path: '/app-signup',
-      name: 'app-signup',
-      component: AppSignup
     },
     {
       path: '/teachers-page',
@@ -54,6 +57,21 @@ export default new Router({
       path: '/langsubjects',
       name: 'langsubjects',
       component: LangSubjects
+    },
+    {
+      path: '/total-filters',
+      name: 'totalfilters',
+      component: TotalFilters
+    },
+    {
+      path: '/my-header',
+      name: 'my-header',
+      component: MyHeader
+    },
+    {
+      path: '/steppers',
+      name: 'steppers',
+      component: Stepper
     }
   ]
 })

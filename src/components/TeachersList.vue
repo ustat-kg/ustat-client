@@ -39,7 +39,6 @@ export default {
           b =>
             b.name.toLowerCase().indexOf(this.searchTerm.toLowerCase()) >= 0 ||
             b.shortInfo.toLowerCase().indexOf(this.searchTerm.toLowerCase()) >= 0)
-
       // if (this.price.length) {
       //   teachers = teachers.filter(b => this.price.filter(val => b.price.indexOf(val) !== -1).length > 0)
       // }

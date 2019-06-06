@@ -1,28 +1,96 @@
 <template>
-  <v-container>
-    <v-layout row wrap>
-      <v-card>
-        <v-container fluid>
-          <v-layout row>
-            <v-flex xs12 md8>
-              <v-card color="red" class="white--text">
-                <v-card-title primary-title class="headline">{{profile.title}}</v-card-title>
-              </v-card>
-            </v-flex>
-            <v-flex xs2 md4 class="title">
-              <v-card-title>
-                <div>{{profile.id}}</div>
+    <div>
+    <v-card>
+      <v-container fluid grid-list-lg>
+        <v-card>
+          <v-layout>
+            <v-flex xs7>
+              <v-card-title primary-title>
+                <div class="headline">{{profile.qualityTitle}}</div>
               </v-card-title>
             </v-flex>
           </v-layout>
-        </v-container>
-      </v-card>
-    </v-layout>
-  </v-container>
+          <v-divider></v-divider>
+          <v-layout>
+            <v-flex xs12>
+              <v-card-title primary-title>
+                <div>{{profile.qualification}}</div>
+              </v-card-title>
+            </v-flex>
+          </v-layout>
+        </v-card>
+        <v-card>
+          <v-layout>
+            <v-flex xs12>
+              <v-card-title primary-title>
+                <div class="headline">Про Александра</div>
+              </v-card-title>
+            </v-flex>
+          </v-layout>
+          <v-divider></v-divider>
+          <v-layout>
+            <v-flex xs5>
+              <v-card-title primary-title>
+                <div>{{profile.bioTitle}}</div>
+              </v-card-title>
+            </v-flex>
+            <v-flex xs7>
+              <v-card-title primary-title>
+                <div>{{profile.bioDescription}}</div>
+              </v-card-title>
+            </v-flex>
+          </v-layout>
+        </v-card>
+        <v-card >
+          <v-divider></v-divider>
+          <v-layout>
+            <v-flex xs5>
+              <v-card-title primary-title>
+                <div>{{profile.eduTitle}}</div>
+              </v-card-title>
+            </v-flex>
+            <v-flex xs7>
+              <v-card-title primary-title>
+                <div>{{profile.eduDescription}}</div>
+              </v-card-title>
+            </v-flex>
+          </v-layout>
+        </v-card>
+        <v-card >
+          <v-layout>
+            <v-flex xs12>
+              <v-card-title primary-title>
+                <div class="headline">Отзывы и рейтинги</div>
+              </v-card-title>
+            </v-flex>
+          </v-layout>
+          <v-divider></v-divider>
+          <v-layout>
+            <v-flex xs5>
+              <v-card-title primary-title>
+                <div>{{profile.commentTitle}}</div>
+              </v-card-title>
+            </v-flex>
+            <v-flex xs7>
+              <v-card-title primary-title>
+                <div>{{profile.commentDescription}}</div>
+              </v-card-title>
+            </v-flex>
+          </v-layout>
+        </v-card>
+      </v-container>
+    </v-card>
+  </div>
+
 </template>
 
 <script>
+// import AppFooter from '../components/AppFooter'
 export default {
+  name: 'teacher-profile',
+  components: {
+    // AppFooter
+  },
   props: {
     profile: {
       type: Object,
@@ -36,4 +104,8 @@ export default {
 </script>
 
 <style scoped>
+.qualif {
+  background-color: #129490;
+  color: white;
+}
 </style>

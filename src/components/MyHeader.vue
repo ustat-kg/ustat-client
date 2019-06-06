@@ -1,67 +1,93 @@
 <template>
+  <div>
+   <v-container fluid>
+         <v-navigation-drawer absolute temporary v-model="drawer" class="hidden-md-and-up">
+      <v-list>
+        <v-list-tile v-for="(item,i) in menuItems" :key="`navdrawer${i}`">
+          <v-list-tile-content>
+            <v-list-tile v-text="item.title"></v-list-tile>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+
+    </v-navigation-drawer>
+    <v-toolbar>
+      <v-toolbar-side-icon @click.stop="drawer= !drawer" class="hidden-md-and-up"></v-toolbar-side-icon>
+      <router-link to="/" tag="span" style="cursor:pointer">
+        <v-toolbar-title v-text="'USTAT'"></v-toolbar-title>
+      </router-link>
   <div class="container-fluid my-header">
     <div class="container">
-      <div class="row my-header-down">
+    <div class="row my-header-down">
         <div class="col-2 col-sm-6 col-md-8 col-lg-2">
           <div class="logo">
             <h3>USTAT</h3>
           </div>
         </div>
-        <div class="row">
-          <router-link
-            class="menu-list"
-            v-for="(menuList, index) in menuLists"
-            :key="index"
-            :to="menuList.route"
-          >
-            <h6 class="title">{{menuList.name}}</h6>
-          </router-link>
+        <div class="col-7 col-sm-6 col-md-8 col-lg-7">
+          <div class="menu-list">
+            <li>Все направления</li>
+            <li>Найти репетитора</li>
+            <li>Стать репетитором</li>
+          </div>
         </div>
-
         <div class="col-1 col-sm-6 col-md-8 col-lg-3">
           <div class="login">
             <li>
               <a href="#">Регистрация</a>
             </li>
             <li>
-              <router-link to="/app-login">Войти</router-link>
+              <router-link to='/app-login'>Войти</router-link>
             </li>
           </div>
         </div>
       </div>
     </div>
   </div>
+    </v-toolbar>
+   </v-container>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'app-header',
+  name: 'my-header',
   data() {
     return {
-      menuLists: [
+      drawer: false
+    }
+  },
+  computed: {
+    menuItems() {
+      return [
         {
-          name: 'Все направления',
-          route: '/all-subjects'
+
+          title: 'Стать репетитором',
+          route: '/login'
         },
         {
-          name: 'Найти репетитора',
-          route: '/search-page'
+
+          title: 'Найти репетитора',
+          route: '/signup'
         },
         {
-          name: 'Стать репетитором',
-          route: '/steppers'
+
+          title: 'Зарегистрироваться',
+          route: '/signup'
+        },
+        {
+
+          title: 'Войти',
+          route: '/signup'
         }
+
       ]
     }
   }
 }
 </script>
-
 <style scoped>
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
-body {
-  font-family: "Montserrat", sans-serif;
-}
 .my-header {
   height: 80px;
   opacity: 0.7;
@@ -76,8 +102,7 @@ body {
   display: flex;
   align-items: center;
   align-content: center;
-  justify-content: space-between;
-  text-align: center;
+  justify-content: center;
 }
 .logo {
   font-family: "Montserrat", sans-serif;
@@ -86,15 +111,15 @@ body {
 .menu-list {
   list-style-type: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+.menu-list li {
+  display: flex;
+  flex-wrap: wrap;
+  width: 30px;
   text-align: center;
   color: grey;
-}
-.title {
-  font-family: "Montserrat", sans-serif !important;
-  font-weight: lighter;
-  color: grey;
-  font-size: 13px !important;
+  font-family: "Montserrat", sans-serif;
 }
 .login {
   display: flex;

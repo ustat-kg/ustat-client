@@ -1,35 +1,39 @@
 <template>
-<div>
+  <div>
     <app-header/>
-  <div class="container-fluid  search-page">
-    <div class="row content-box">
-      <div class="col-8 offset-2 ">
-        <h1 class="main-text">Легко и быстро находите нужного Вам человека для обучения</h1>
+    <div class="container-fluid search-page">
+      <div class="row content-box">
+        <div class="col-8 offset-2">
+          <h1 class="main-text">Легко и быстро находите нужного Вам человека для обучения</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 offset-4 md-8 sm-10 xs-12">
+          <app-search/>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-6 offset-4 md-8 sm-10 xs-12 ">
-        <app-search />
-      </div>
-    </div>
+    <app-subjects/>
+    <app-footer/>
   </div>
-  <app-subjects/>
-</div>
-
 </template>
+
 <script>
 import AppHeader from '../components/AppHeader'
 import AppSubjects from '../components/AppSubjects'
 import AppSearch from '../components/AppSearch'
-// import AppFooter from '../components/AppFooter'
+import AppFooter from '../components/AppFooter'
+
 export default {
   name: 'search-page',
   components: {
     AppHeader,
     AppSubjects,
-    AppSearch
+    AppSearch,
+    AppFooter
+
   },
-  data () {
+  data() {
     return {}
   }
 }
@@ -42,14 +46,13 @@ export default {
   background-repeat: no-repeat;
   padding: 250px 0;
   width: 100%;
-  height:100%;
+  height: 100%;
   overflow: hidden;
 }
 
 .content-box {
   text-align: center;
   margin-top: -9%;
-
 }
 .label-text {
   font-family: "Montserrat", sans-serif;

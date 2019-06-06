@@ -11,6 +11,7 @@
               <v-card-title>
                 <div>{{teacher.name}} {{teacher.surname}}</div>
                 <div class="title-short">{{teacher.shortInfo}}</div>
+                 <div class='subject'>{{teacher.subject}}</div>
               </v-card-title>
             </v-flex>
             <v-flex xs4 md4>
@@ -105,5 +106,10 @@ export default {
 .teachers-card-down {
   padding: 20px;
 }
-
+.subject {
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  font-size: 10px;
+  margin-left: 70%
+}
 </style>

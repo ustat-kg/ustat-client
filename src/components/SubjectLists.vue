@@ -23,7 +23,7 @@ export default {
       subjectsLists: [
         {
           name: 'Английский',
-          route: '/schoolsubjects'
+          route: '/teachers-page'
         },
         {
           name: 'Кыргызский',
@@ -44,6 +44,14 @@ export default {
         {
           name: 'Французский',
           route: '/itsubjects'
+        },
+        {
+          name: 'Японский',
+          route: '/itsubjects'
+        },
+        {
+          name: 'Китайский',
+          route: '/itsubjects'
         }
       ]
     }
@@ -56,8 +64,8 @@ export default {
   margin-top: -10%;
 }
 .subject-list {
-  width: 80px;
-  height: 50px;
+  width: 70px;
+  height: 40px;
   display: flex;
   align-items: center;
   text-align: center;

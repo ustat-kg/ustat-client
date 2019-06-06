@@ -8,10 +8,9 @@
           <input type="checkbox" id="check">
           <label class="check-signedin" for="check">Сохранить пароль</label>
         </div>
-          <button
-            type="submit"
-            class="login-form-btn"
-            >Войти</button>
+         <router-link to="/search-page">
+            <button type="submit" class="login-form-btn">Войти</button>
+         </router-link>
         <span class="forgotpassword">Забыли пароль?</span>
       </form>
   </div>
@@ -98,11 +97,13 @@ export default {
     font-weight: 500;
     box-shadow: 2px 8px 32px -1px rgba(0,0,0,0.75);
     letter-spacing: 0.1cm;
+    color: white;
   }
 
   .login-form-btn:hover {
     background: #07726F;
-    /* outline: none; */
+    text-decoration: none;
+
   }
 
   .flexcheckbox {

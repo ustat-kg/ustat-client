@@ -1,24 +1,28 @@
 <template>
-  <form @submit.prevent="signUp" class="login-form">
-    <h1 class="logo-name">USTAT</h1>
-    <input  type="text" name="name" placeholder="Напишите Ваше ФИО" v-model="name" class="signup-form-input">
-    <input type="email" name="email" placeholder="Ваша почта" v-model="email" class="signup-form-input">
-    <input  type="password" name="password"  placeholder="Пароль" class="signup-form-input" v-model="password">
-    <div class="flexcheckbox">
-      <input type="checkbox" id="check">
-      <label class="check-signedin" for="check">Сохранить пароль</label>
-    </div>
-      <button type="submit" class="login-form-btn" >Зарегистрироваться</button>
-  </form>
+<div class="login-page">
+      <form @submit.prevent='signIn' class="login-form">
+        <h1 class="logo-name">USTAT</h1>
+        <input name="id" placeholder="User name" v-model="name" class="login-form-input">
+        <input name="password" type="password" placeholder="Пароль" class="login-form-input" v-model="password">
+        <div class="flexcheckbox">
+          <input type="checkbox" id="check">
+          <label class="check-signedin" for="check">Сохранить пароль</label>
+        </div>
+          <button
+            type="submit"
+            class="login-form-btn"
+            >Register</button>
+        <span class="forgotpassword">Забыли пароль?</span>
+      </form>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'app-signup-form',
+  name: 'signup',
   data: () => ({
-    password: null,
-    name: null,
-    email: null
+    password: '',
+    name: ''
   }),
   computed: {
     isUserAuthenticated () {
@@ -34,7 +38,7 @@ export default {
   },
   methods: {
     signup () {
-      this.$store.dispatch('SIGNUP', {email: this.email, password: this.password, name: this.name})
+      this.$store.dispatch('SIGNIN', {email: this.email, password: this.password, name: this.name})
     }
   }
 }
@@ -65,7 +69,7 @@ export default {
     font-weight: 900;
   }
 
-  .signup-form-input{
+  .login-form-input {
     height:50px;
     width: 350px;
     border:1px solid grey;

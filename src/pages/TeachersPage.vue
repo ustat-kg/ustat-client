@@ -1,32 +1,34 @@
 <template>
   <div>
     <app-header />
-    <!-- <div class="search">
-       <app-search />
-    </div> -->
     <teachers-list />
+    <app-pagination/>
+    <div class="footer">
+      <app-footer />
+    </div>
   </div>
 </template>
 
 <script>
 import TeachersList from '../components/TeachersList'
-// import AppSearch from '../components/AppSearch'
 import AppHeader from '../components/AppHeader'
+import AppFooter from '../components/AppFooter'
+import AppPagination from '../components/AppPagination'
+
 export default {
   name: 'teachers-page',
   components: {
     TeachersList,
-    // AppSearch,
-    AppHeader
+    AppHeader,
+    AppFooter,
+    AppPagination
+
   }
 }
 </script>
 
 <style scoped>
-.search {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+.footer {
+  margin-top:-40%;
 }
 </style>
