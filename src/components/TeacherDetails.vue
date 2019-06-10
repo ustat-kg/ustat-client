@@ -61,7 +61,7 @@ export default {
   height: 80px;
 }
 .price {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif !important;
   font-weight: bolder;
 }
 .teachers-card {
@@ -87,7 +87,7 @@ export default {
   align-items: center;
 }
 .title {
-  font-family: "Montserrat", sans-serif;
+  font-family:  "Montserrat", sans-serif !important;
   font-weight: initial;
   display: flex;
   flex-direction: column;
@@ -96,7 +96,7 @@ export default {
   font-size: 12px;
 }
 .title-short {
-  font-family: "Montserrat", sans-serif;
+  font-family:  "Montserrat", sans-serif !important;
   color: #129490;
   font-weight: lighter;
   font-size: 15px;
@@ -107,7 +107,7 @@ export default {
   padding: 20px;
 }
 .subject {
-  font-family: "Montserrat", sans-serif;
+  font-family:  "Montserrat", sans-serif !important;
   font-weight: lighter;
   font-size: 10px;
   margin-left: 70%

@@ -9,7 +9,7 @@ export default {
       name: 'Aleksandr',
       surname: 'Kim',
       avatarImg: avatarImg1,
-      shortInfo: 'Игра на  фортепиано,хорошее понимание психологии людей',
+      shortInfo: 'Химия, обладатель премии по разработке новых элементов',
       details: '',
       price: 400,
       rating: 5,
@@ -17,29 +17,13 @@ export default {
       experience: 15,
       gender: ['Male', 'Female'],
       age: 25,
-      subject: 'Искусство',
-      profiles: [
-        {
-          qualification: 'Given my 6+ years writing academic papers (theses, analyses, and reviews), I have developed a seasoned understanding of the how English functions in terms of rhetoric, grammar and articulation. Also, after having studied two foreign languages',
-          qualityTitle: 'Квалификационные данные'
-
-        },
-        {
-
-          bioTitle: 'Bio',
-          bioDescription: 'Hello! I’m Taylah, a cheerful, GRADE-BOOSTING female Tutor! Tutoring sessions for children, teens, college students, lawyers, nurses, businessmen, world-travelers, a heritage-seekers.... I will design a personalized curriculum that will clarify even the most ambiguous concepts in the most memorable ways possible. We will have fun as I evaluate your learning style and help you learn with precise and engaging activities'
-
-        },
-        {
-          eduTitle: 'Образование',
-          eduDescription: 'American University Central Asia'
-        },
-        {
-          commentTitle: 'Отзывы',
-          commenDescription: ' I have tried learning English many times, and working with him has been so much more helpful than anything else Ive ever tried b'
-        // eslint-disable-next-line no-trailing-spaces
-        }
-      ]
+      location: 'Бишкек',
+      category: 'Школьные предметы',
+      subject: 'Английский',
+      qualification: 'Given my 6+ years writing academic papers (theses, analyses, and reviews), I have developed a seasoned understanding of the how English functions in terms of rhetoric, grammar and articulation. Also, after having studied two foreign languages',
+      bioDescription: 'Hello! I’m Taylah, a cheerful, GRADE-BOOSTING female Tutor! Tutoring sessions for children, teens, college students, lawyers, nurses, businessmen, world-travelers, a heritage-seekers.... I will design a personalized curriculum that will clarify even the most ambiguous concepts in the most memorable ways possible. We will have fun as I evaluate your learning style and help you learn with precise and engaging activities',
+      eduDescription: 'American University Central Asia',
+      commentDescription: ' I have tried learning English many times, and working with him has been so much more helpful than anything else Ive ever tried b'
     },
     {
       id: 'kjbk1234525jb45kjbkjb',
@@ -54,29 +38,7 @@ export default {
       experience: 10,
       gender: ['Male', 'Female'],
       age: 25,
-      subject: 'Бизнес-планирование',
-      profiles: [
-        {
-          qualification: 'Given my 6+ years writing academic papers (theses, analyses, and reviews), I have developed a seasoned understanding of the how English functions in terms of rhetoric, grammar and articulation. Also, after having studied two foreign languages',
-          qualityTitle: 'Квалификационные данные'
-
-        },
-        {
-
-          bioTitle: 'Bio',
-          bioDescription: 'Hello! I’m Taylah, a cheerful, GRADE-BOOSTING female Tutor! Tutoring sessions for children, teens, college students, lawyers, nurses, businessmen, world-travelers, a heritage-seekers.... I will design a personalized curriculum that will clarify even the most ambiguous concepts in the most memorable ways possible. We will have fun as I evaluate your learning style and help you learn with precise and engaging activities'
-
-        },
-        {
-          eduTitle: 'Образование',
-          eduDescription: 'American University Central Asia'
-        },
-        {
-          commentTitle: 'Отзывы',
-          commenDescription: ' I have tried learning English many times, and working with him has been so much more helpful than anything else Ive ever tried b'
-        // eslint-disable-next-line no-trailing-spaces
-        }
-      ]
+      subject: 'Бизнес-планирование'
     },
     {
       id: 'kjbk12345jb45kjbkjb',
@@ -91,29 +53,7 @@ export default {
       experience: 10,
       subject: 'Фортепиано',
       gender: ['Male', 'Female'],
-      age: 25,
-      profiles: [
-        {
-          qualification: 'Given my 6+ years writing academic papers (theses, analyses, and reviews), I have developed a seasoned understanding of the how English functions in terms of rhetoric, grammar and articulation. Also, after having studied two foreign languages',
-          qualityTitle: 'Квалификационные данные'
-
-        },
-        {
-
-          bioTitle: 'Bio',
-          bioDescription: 'Hello! I’m Taylah, a cheerful, GRADE-BOOSTING female Tutor! Tutoring sessions for children, teens, college students, lawyers, nurses, businessmen, world-travelers, a heritage-seekers.... I will design a personalized curriculum that will clarify even the most ambiguous concepts in the most memorable ways possible. We will have fun as I evaluate your learning style and help you learn with precise and engaging activities'
-
-        },
-        {
-          eduTitle: 'Образование',
-          eduDescription: 'American University Central Asia'
-        },
-        {
-          commentTitle: 'Отзывы',
-          commenDescription: ' I have tried learning English many times, and working with him has been so much more helpful than anything else Ive ever tried b'
-        // eslint-disable-next-line no-trailing-spaces
-        }
-      ]
+      age: 25
     },
     {
       id: 'kjbk12345jbkj45bkjb',
@@ -128,29 +68,7 @@ export default {
       experience: 15,
       gender: ['Male', 'Female'],
       age: 25,
-      subject: 'Английский',
-      profiles: [
-        {
-          qualification: 'Given my 6+ years writing academic papers (theses, analyses, and reviews), I have developed a seasoned understanding of the how English functions in terms of rhetoric, grammar and articulation. Also, after having studied two foreign languages',
-          qualityTitle: 'Квалификационные данные'
-
-        },
-        {
-
-          bioTitle: 'Bio',
-          bioDescription: 'Hello! I’m Taylah, a cheerful, GRADE-BOOSTING female Tutor! Tutoring sessions for children, teens, college students, lawyers, nurses, businessmen, world-travelers, a heritage-seekers.... I will design a personalized curriculum that will clarify even the most ambiguous concepts in the most memorable ways possible. We will have fun as I evaluate your learning style and help you learn with precise and engaging activities'
-
-        },
-        {
-          eduTitle: 'Образование',
-          eduDescription: 'American University Central Asia'
-        },
-        {
-          commentTitle: 'Отзывы',
-          commenDescription: ' I have tried learning English many times, and working with him has been so much more helpful than anything else Ive ever tried b'
-        // eslint-disable-next-line no-trailing-spaces
-        }
-      ]
+      subject: 'Английский'
     },
     {
       id: 'kjbk12345jb78kjbkjb',
@@ -165,29 +83,7 @@ export default {
       experience: 15,
       gender: ['Male', 'Female'],
       age: 25,
-      subject: 'Английский',
-      profiles: [
-        {
-          qualification: 'Given my 6+ years writing academic papers (theses, analyses, and reviews), I have developed a seasoned understanding of the how English functions in terms of rhetoric, grammar and articulation. Also, after having studied two foreign languages',
-          qualityTitle: 'Квалификационные данные'
-
-        },
-        {
-
-          bioTitle: 'Bio',
-          bioDescription: 'Hello! I’m Taylah, a cheerful, GRADE-BOOSTING female Tutor! Tutoring sessions for children, teens, college students, lawyers, nurses, businessmen, world-travelers, a heritage-seekers.... I will design a personalized curriculum that will clarify even the most ambiguous concepts in the most memorable ways possible. We will have fun as I evaluate your learning style and help you learn with precise and engaging activities'
-
-        },
-        {
-          eduTitle: 'Образование',
-          eduDescription: 'American University Central Asia'
-        },
-        {
-          commentTitle: 'Отзывы',
-          commenDescription: ' I have tried learning English many times, and working with him has been so much more helpful than anything else Ive ever tried b'
-        // eslint-disable-next-line no-trailing-spaces
-        }
-      ]
+      subject: 'Английский'
     }
     ]
   },

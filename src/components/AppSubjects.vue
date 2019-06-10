@@ -34,32 +34,62 @@ export default {
         {
           name: 'Школьные предметы',
           img: image1,
-          route: '/schoolsubjects'
+          route: {
+            name: 'subjects',
+            params: {
+              subject_slug: 'school'
+            }
+          }
         },
         {
           name: 'Иностранные языки',
           img: image2,
-          route: '/langsubjects'
+          route: {
+            name: 'subjects',
+            params: {
+              subject_slug: 'language'
+            }
+          }
         },
         {
           name: 'Творчество',
           img: image3,
-          route: '/artsubjects'
+          route: {
+            name: 'subjects',
+            params: {
+              subject_slug: 'art'
+            }
+          }
         },
         {
           name: 'Повышение квалификации',
           img: image4,
-          route: '/developsubjects-page'
+          route: {
+            name: 'subjects',
+            params: {
+              subject_slug: 'development'
+            }
+          }
         },
         {
           name: 'Бизнес',
           img: image5,
-          route: '/businesssubjects-page'
+          route: {
+            name: 'subjects',
+            params: {
+              subject_slug: 'bussines'
+            }
+          }
         },
         {
           name: 'IT-development',
           img: image6,
-          route: '/itsubjects'
+          route: {
+            name: 'subjects',
+            params: {
+              subject_slug: 'it'
+            }
+          }
         }
       ]
     }

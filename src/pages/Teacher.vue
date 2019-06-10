@@ -5,9 +5,18 @@
       <teacher-details :teacher = 'teacher'></teacher-details>
     </v-flex>
   </v-layout>
-      <v-flex v-for="profile in teacher.profiles" :key ="profile.id" xs12 sm10 md8 offset-sm1 offset-md2>
-    <teacher-profile :profile='profile' :teacherId='teacher.id'></teacher-profile>
-    </v-flex>
+
+ <v-layout>
+     <v-flex xs12 sm10 md8 offset-sm1 offset-md2>
+      <teacher-profile :teacher='teacher' :teacherId='teacher.id'></teacher-profile>
+   </v-flex>
+ </v-layout>
+ <!-- <v-layout>
+     <v-flex xs12 sm10 md8 offset-sm1 offset-md2>
+     <connect :teacher = 'teacher'></connect>
+   </v-flex>
+ </v-layout> -->
+
 </v-container>
 </template>
 
@@ -15,6 +24,7 @@
 
 import TeacherDetails from '../components/TeacherDetails'
 import TeacherProfile from '../components/TeacherProfile'
+import Connect from '../components/Connect'
 export default {
   props: {
     'id': {
@@ -29,7 +39,8 @@ export default {
   },
   components: {
     TeacherDetails,
-    TeacherProfile
+    TeacherProfile,
+    Connect
   }
 
 }

@@ -1,7 +1,7 @@
 <template>
   <v-container fluid grid-list-xl>
     <v-layout wrap align-center>
-      <v-flex xs12 sm6 d-flex>
+      <v-flex xs4 sm6 d-flex>
         <v-select
           :items="items"
           label="Укажите пол репетитора"

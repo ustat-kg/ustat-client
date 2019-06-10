@@ -5,12 +5,13 @@ import SignUpPage from '../pages/SignUpPage.vue'
 import MainPage from '../pages/MainPage.vue'
 import SearchPage from '../pages/SearchPage.vue'
 import TeachersPage from '../pages/TeachersPage.vue'
-import SchoolSubjects from '../pages/SchoolSubjects.vue'
+import Subjects from '../pages/Subjects.vue'
 import LangSubjects from '../pages/LangSubjects.vue'
 import Teacher from '../pages/Teacher.vue'
 import TotalFilters from '../components/TotalFilters.vue'
 import MyHeader from '../components/MyHeader.vue'
 import Stepper from '../components/Steppers.vue'
+import Connect from '../components/Connect.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -49,9 +50,9 @@ export default new Router({
       component: Teacher
     },
     {
-      path: '/schoolsubjects',
-      name: 'schoolsubjects',
-      component: SchoolSubjects
+      path: '/subjects/:subject_slug ',
+      name: 'subjects',
+      component: Subjects
     },
     {
       path: '/langsubjects',
@@ -72,6 +73,11 @@ export default new Router({
       path: '/steppers',
       name: 'steppers',
       component: Stepper
+    },
+    {
+      path: '/connect',
+      name: 'connect',
+      component: Connect
     }
   ]
 })

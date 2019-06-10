@@ -11,7 +11,7 @@
               <v-card-title class="title">
                 <div>{{teacher.name}} {{teacher.surname}}</div>
                 <div class="title-short">{{teacher.shortInfo}}</div>
-                <div class='subject'>{{teacher.subject}}</div>
+                <div class='subject'>{{teacher.category}}</div>
               </v-card-title>
             </v-flex>
             <v-flex xs4 md4 class>

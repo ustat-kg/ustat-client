@@ -72,7 +72,7 @@ export default {
     height:50px;
     width: 350px;
     border:1px solid grey;
-    border-radius: 25px;
+    border-radius: 10px;
     padding-left: 30px;
     font-size: 16px;
     outline: none;
@@ -88,7 +88,7 @@ export default {
     height:50px;
     width: 350px;
     border:1px solid grey;
-    border-radius: 25px;
+    border-radius: 10px;
     font-size: 20px;
     background: #129490;
     border: none;

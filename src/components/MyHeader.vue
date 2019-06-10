@@ -16,34 +16,7 @@
       <router-link to="/" tag="span" style="cursor:pointer">
         <v-toolbar-title v-text="'USTAT'"></v-toolbar-title>
       </router-link>
-  <div class="container-fluid my-header">
-    <div class="container">
-    <div class="row my-header-down">
-        <div class="col-2 col-sm-6 col-md-8 col-lg-2">
-          <div class="logo">
-            <h3>USTAT</h3>
-          </div>
-        </div>
-        <div class="col-7 col-sm-6 col-md-8 col-lg-7">
-          <div class="menu-list">
-            <li>Все направления</li>
-            <li>Найти репетитора</li>
-            <li>Стать репетитором</li>
-          </div>
-        </div>
-        <div class="col-1 col-sm-6 col-md-8 col-lg-3">
-          <div class="login">
-            <li>
-              <a href="#">Регистрация</a>
-            </li>
-            <li>
-              <router-link to='/app-login'>Войти</router-link>
-            </li>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+
     </v-toolbar>
    </v-container>
   </div>

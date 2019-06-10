@@ -51,7 +51,7 @@
 
             <v-stepper-content step="3">
               <v-card class="stepper-card">
-                <v-flex xs9 offset-3>
+                <v-flex xs10 offset-2>
                   <form @submit.prevent="signIn" class="login-form">
                     <v-flex xs12>
                       <input  type="tel"  id="tel"  placeholder="Ваш номер для связи +996" v-model="phone" class="login-form-input">
@@ -152,7 +152,7 @@ export default {
   margin: 3%;
 }
 ::placeholder {
-  color: white;
+  color:black;
 }
 
 .login-form-btn {
@@ -161,12 +161,17 @@ export default {
   border: 1px solid grey;
   border-radius: 5px;
   font-size: 11px;
-  background: #129490;
+  background-color: #129490;
   border: none;
   outline: none;
   font-family: "Montserrat", sans-serif !important;
   font-weight: bold;
   box-shadow: 2px 8px 32px -1px rgba(0, 0, 0, 0.75);
+}
+
+.login-form-btn::before {
+  background-color: #129490;
+  opacity: 1;
 }
 
 .login-form-btn:hover {
@@ -182,10 +187,8 @@ export default {
   font-weight: lighter;
 }
 .stepper-page-box {
-  background: rgba(82, 80, 80, 0.1);
-  border-radius: 15px;
-  height: 500px;
-  width: 800px;
+  background: rgba(212, 208, 208, 0.7);
+  border-radius: 20px;
 }
 .stepper-card {
   width: 800px;
@@ -263,6 +266,7 @@ opacity: .9;
 .my-avatar {
   margin-top: -25%;
 }
+
 @media only screen and (min-width: 150px) and (max-width: 670px) {
   .btnToLogin {
     width: 290px;

@@ -6,52 +6,51 @@
           <v-layout>
             <v-flex xs7>
               <v-card-title primary-title>
-                <div class="headline">{{profile.qualityTitle}}</div>
+                <div class="headline">Квалификационные данные</div>
               </v-card-title>
             </v-flex>
           </v-layout>
-          <v-divider></v-divider>
+          <v-divider class="devider"></v-divider>
           <v-layout>
             <v-flex xs12>
               <v-card-title primary-title>
-                <div>{{profile.qualification}}</div>
+                <div>{{teacher.qualification}}</div>
               </v-card-title>
             </v-flex>
           </v-layout>
         </v-card>
         <v-card>
           <v-layout>
-            <v-flex xs12>
+            <v-flex xs5>
               <v-card-title primary-title>
-                <div class="headline">Про Александра</div>
+                <div class="headline">Про {{teacher.name}}</div>
               </v-card-title>
             </v-flex>
           </v-layout>
-          <v-divider></v-divider>
+          <v-divider class="devider"></v-divider>
           <v-layout>
             <v-flex xs5>
               <v-card-title primary-title>
-                <div>{{profile.bioTitle}}</div>
+                <div>Bio</div>
               </v-card-title>
             </v-flex>
             <v-flex xs7>
               <v-card-title primary-title>
-                <div>{{profile.bioDescription}}</div>
+                <div>{{teacher.bioDescription}}</div>
               </v-card-title>
             </v-flex>
           </v-layout>
         </v-card>
         <v-card >
-          <v-divider></v-divider>
           <v-layout>
             <v-flex xs5>
               <v-card-title primary-title>
-                <div>{{profile.eduTitle}}</div>
+                <div>Образование</div>
               </v-card-title>
             </v-flex>
             <v-flex xs7>
               <v-card-title primary-title>
-                <div>{{profile.eduDescription}}</div>
+                <div>{{teacher.eduDescription}}</div>
               </v-card-title>
             </v-flex>
           </v-layout>
@@ -64,16 +63,11 @@
               </v-card-title>
             </v-flex>
           </v-layout>
-          <v-divider></v-divider>
+          <v-divider class="devider"></v-divider>
           <v-layout>
-            <v-flex xs5>
-              <v-card-title primary-title>
-                <div>{{profile.commentTitle}}</div>
-              </v-card-title>
-            </v-flex>
             <v-flex xs7>
               <v-card-title primary-title>
-                <div>{{profile.commentDescription}}</div>
+                <div>{{teacher.commentDescription}}</div>
               </v-card-title>
             </v-flex>
           </v-layout>
@@ -92,11 +86,11 @@ export default {
     // AppFooter
   },
   props: {
-    profile: {
+    'teacher': {
       type: Object,
       required: true
     },
-    teacherId: {
+    'teacherId': {
       required: true
     }
   }
@@ -108,4 +102,8 @@ export default {
   background-color: #129490;
   color: white;
 }
+.devider {
+  background-color: #129490;
+}
+
 </style>

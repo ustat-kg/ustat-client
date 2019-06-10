@@ -14,7 +14,9 @@
       </div>
     </div>
     <app-subjects/>
-    <app-footer/>
+    <div class='my-footer'>
+      <app-footer />
+    </div>
   </div>
 </template>
 
@@ -97,5 +99,8 @@ export default {
   box-shadow: 2px 8px 32px -1px rgba(0, 0, 0, 0.75);
   letter-spacing: 0.1cm;
   margin-left: -4px;
+}
+.my-footer {
+  margin-top: 20%;
 }
 </style>

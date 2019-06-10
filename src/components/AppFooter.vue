@@ -31,12 +31,15 @@ export default {
 }
 </script>
 <style scoped>
-.my-footer {
+/* .my-footer {
  margin-top:50%;
 
-}
+} */
 .my-teal {
  background-color: #129490;
  opacity: 0.7;
+}
+.my-footer {
+  margin-top: 105vh;
 }
 </style>

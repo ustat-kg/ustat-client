@@ -2,13 +2,14 @@
   <div class="container-fluid my-header">
     <div class="container">
       <div class="row my-header-down">
-        <div class="col-2 col-sm-6 col-md-8 col-lg-2">
+        <div class="col-2 col-sm-6 col-md-4 col-lg-2">
           <div class="logo">
             <h3>USTAT</h3>
           </div>
         </div>
-        <div class="row">
-          <router-link
+        <div class="row center">
+         <div class="col-8 col-sm-6- col-md-4 col-lg-8 ">
+            <router-link
             class="menu-list"
             v-for="(menuList, index) in menuLists"
             :key="index"
@@ -16,9 +17,11 @@
           >
             <h6 class="title">{{menuList.name}}</h6>
           </router-link>
+
+         </div>
         </div>
 
-        <div class="col-1 col-sm-6 col-md-8 col-lg-3">
+        <div class="col-2 col-sm-6 col-md-4 col-lg-2">
           <div class="login">
             <li>
               <a href="#">Регистрация</a>
@@ -68,6 +71,7 @@ body {
   background-color: black;
   width: 100%;
   position: absolute;
+
 }
 .my-header-down {
   width: 100%;
@@ -132,5 +136,12 @@ a:after {
 a:hover:after {
   width: 100%;
   left: 0;
+}
+.center {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
 }
 </style>

@@ -3,10 +3,13 @@
     <div class="row">
       <div class="col-10 offset-2 listparent">
         <div class="row">
-          <router-link class="col-4 subject-list"
-            v-for="(subjectList, index) in subjectsLists" :key="index"
-            :to="subjectList.route">
-            <h5 class="title" >{{subjectList.name}}</h5>
+          <router-link
+            class="col-4 subject-list"
+            v-for="(subject, index) in subjects"
+            :key="index"
+            :to="subject.route"
+          >
+            <h5 class="title">{{subject.name}}</h5>
           </router-link>
         </div>
       </div>
@@ -15,46 +18,10 @@
 </template>
 
 <script>
-
 export default {
   name: 'subjects-lists',
-  data () {
-    return {
-      subjectsLists: [
-        {
-          name: 'Английский',
-          route: '/teachers-page'
-        },
-        {
-          name: 'Кыргызский',
-          route: '/langsubjects'
-        },
-        {
-          name: 'Турецкий',
-          route: '/artsubjects'
-        },
-        {
-          name: 'Русский',
-          route: '/developsubjects-page'
-        },
-        {
-          name: 'Немецкий',
-          route: '/businesssubjects-page'
-        },
-        {
-          name: 'Французский',
-          route: '/itsubjects'
-        },
-        {
-          name: 'Японский',
-          route: '/itsubjects'
-        },
-        {
-          name: 'Китайский',
-          route: '/itsubjects'
-        }
-      ]
-    }
+  props: {
+    subjects: Array
   }
 }
 </script>
@@ -71,20 +38,19 @@ export default {
   text-align: center;
   justify-content: center;
   text-decoration: none;
-  border:1px solid grey;
+  border: 1px solid grey;
   border-radius: 10px;
   padding-left: 30px;
   font-size: 12px;
   outline: none;
   color: white;
-  box-shadow: 2px 8px 32px -1px rgba(0,0,0,0.75);
-  margin:20px;
+  box-shadow: 2px 8px 32px -1px rgba(0, 0, 0, 0.75);
+  margin: 20px;
   text-align: center;
-
-  }
+}
 .title {
   font-family: "Montserrat", sans-serif;
   font-weight: inherit;
-  color:white;
+  color: white;
 }
 </style>
