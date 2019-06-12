@@ -11,12 +11,12 @@
               <v-card-title>
                 <div>{{teacher.name}} {{teacher.surname}}</div>
                 <div class="title-short">{{teacher.shortInfo}}</div>
-                 <div class='subject'>{{teacher.subject}}</div>
               </v-card-title>
             </v-flex>
             <v-flex xs4 md4>
               <v-card-actions class="teacher-right">
                 <div class="price">{{teacher.price}} сом/ в час</div>
+                <div class='subject'>{{teacher.subject}}</div>
                 <div class="rating">
                   <v-rating v-model="teacher.rating" color="yellow" readonly dense half-increments></v-rating>
                   <div>
@@ -70,6 +70,7 @@ export default {
   justify-content: space-evenly;
   align-items: flex-start;
   height: 170px;
+  margin-top: 80px;
 }
 .teacher-right {
   display: flex;

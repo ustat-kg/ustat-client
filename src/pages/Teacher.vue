@@ -1,30 +1,36 @@
 <template>
-<v-container grid-list-md v-if="teacher">
+<div>
+    <app-header class='teacher-info'></app-header>
+  <v-container grid-list-md v-if="teacher" >
   <v-layout row wrap>
-    <v-flex xs12 sm10 md8 offset-sm1 offset-md2>
+    <v-flex xs8 sm10 md8 offset-sm1>
       <teacher-details :teacher = 'teacher'></teacher-details>
     </v-flex>
+     <v-flex xs2 sm2 md2 offset-sm1>
+      <connect></connect>
+   </v-flex>
   </v-layout>
-
- <v-layout>
-     <v-flex xs12 sm10 md8 offset-sm1 offset-md2>
+ <v-layout row wrap>
+     <v-flex xs8 sm10 md8 offset-sm1>
       <teacher-profile :teacher='teacher' :teacherId='teacher.id'></teacher-profile>
    </v-flex>
- </v-layout>
- <!-- <v-layout>
-     <v-flex xs12 sm10 md8 offset-sm1 offset-md2>
-     <connect :teacher = 'teacher'></connect>
+   <v-flex xs2 sm2 md2>
+      <rating></rating>
+       <review></review>
    </v-flex>
- </v-layout> -->
-
-</v-container>
+ </v-layout>
+ </v-container>
+</div>
 </template>
 
 <script>
 
+import AppHeader from '../components/AppHeader'
 import TeacherDetails from '../components/TeacherDetails'
 import TeacherProfile from '../components/TeacherProfile'
 import Connect from '../components/Connect'
+import Rating from '../components/Rating'
+import Review from '../components/Review'
 export default {
   props: {
     'id': {
@@ -40,12 +46,21 @@ export default {
   components: {
     TeacherDetails,
     TeacherProfile,
-    Connect
+    Connect,
+    Rating,
+    Review,
+    AppHeader
   }
 
 }
 </script>
 
-<style>
-
+<style scoped>
+.mmm {
+  margin: 25px;
+}
+.teacher-info {
+  margin-bottom: 100px;
+  position: relative;
+}
 </style>

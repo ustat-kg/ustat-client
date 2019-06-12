@@ -2,13 +2,14 @@
   <div class="container-fluid my-header">
     <div class="container">
       <div class="row my-header-down">
-        <div class="col-2 col-sm-6 col-md-4 col-lg-2">
-          <div class="logo">
+        <div class="col-2 col-sm-4 col-md-4 col-lg-2">
+         <router-link to="/" tag="span" style="cursor:pointer">
+            <div class="logo">
             <h3>USTAT</h3>
           </div>
+         </router-link>
         </div>
-        <div class="row center">
-         <div class="col-8 col-sm-6- col-md-4 col-lg-8 ">
+         <div class="col-8 col-sm-4- col-md-4 col-lg-8 center">
             <router-link
             class="menu-list"
             v-for="(menuList, index) in menuLists"
@@ -17,11 +18,8 @@
           >
             <h6 class="title">{{menuList.name}}</h6>
           </router-link>
-
          </div>
-        </div>
-
-        <div class="col-2 col-sm-6 col-md-4 col-lg-2">
+        <div class="col-2 col-sm-4 col-md-4 col-lg-2">
           <div class="login">
             <li>
               <a href="#">Регистрация</a>
@@ -89,10 +87,12 @@ body {
 }
 .menu-list {
   list-style-type: none;
-  display: flex;
+  display: inline-block;
   justify-content: space-between;
   text-align: center;
+  align-items: center;
   color: grey;
+  flex-direction: column;
 }
 .title {
   font-family: "Montserrat", sans-serif !important;
@@ -137,11 +137,5 @@ a:hover:after {
   width: 100%;
   left: 0;
 }
-.center {
-  display:flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-}
+
 </style>

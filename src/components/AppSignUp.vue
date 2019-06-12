@@ -1,19 +1,20 @@
 <template>
 <div class="login-page">
-      <form @submit.prevent='signIn' class="login-form">
+      <form @submit.prevent='signup' class="login-form">
         <h1 class="logo-name">USTAT</h1>
-        <input name="id" placeholder="User name" v-model="name" class="login-form-input">
-        <input name="password" type="password" placeholder="Пароль" class="login-form-input" v-model="password">
+        <input name="firstName" v-model="firtsName" placeholder="Name"  class="login-form-input">
+        <input name="lastName"  v-model="lastName" placeholder="Last name"  class="login-form-input" >
+        <input name="login" v-model="login" placeholder="login"  class="login-form-input">
+        <input name="password" v-model="password"  type="password" placeholder="Пароль" class="login-form-input" >
+        <input name="email" v-model="email" type="email" placeholder="Email" class="login-form-input" >
         <div class="flexcheckbox">
           <input type="checkbox" id="check">
           <label class="check-signedin" for="check">Сохранить пароль</label>
         </div>
-          <button
-            type="submit"
+          <button  type="submit"
             class="login-form-btn"
             >Register</button>
-        <span class="forgotpassword">Забыли пароль?</span>
-      </form>
+         </form>
   </div>
 </template>
 
@@ -22,7 +23,10 @@ export default {
   name: 'signup',
   data: () => ({
     password: '',
-    name: ''
+    firtsName: '',
+    lastName: '',
+    email: '',
+    login: ''
   }),
   computed: {
     isUserAuthenticated () {
@@ -38,7 +42,7 @@ export default {
   },
   methods: {
     signup () {
-      this.$store.dispatch('SIGNIN', {email: this.email, password: this.password, name: this.name})
+      this.$store.dispatch('SIGNUP', this.$data)
     }
   }
 }
@@ -48,8 +52,8 @@ export default {
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 @import url(https://fonts.googleapis.com/css?family=Lato);
 .login-form {
-    height: 350px;
-    width: 400px;
+    height: 450px;
+    width: 450px;
     color: white;
     display: flex;
     flex-direction: column;
@@ -79,6 +83,7 @@ export default {
     outline: none;
     color: white;
     box-shadow: 2px 8px 32px -1px rgba(0,0,0,0.75);
+    margin: 5px;
   }
 
   .error {

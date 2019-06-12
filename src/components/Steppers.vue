@@ -11,19 +11,19 @@
             <v-stepper-step step="3" class="stepper-title">Контакты</v-stepper-step>
           </v-stepper-header>
           <v-stepper-items class="stepper-page-box">
-            <v-stepper-content step="1">
+            <v-stepper-content step="1" class="my-content">
               <v-card class="stepper-card">
                 <v-flex xs9 offset-3>
-                  <form @submit.prevent="signIn" class="login-form">
+                  <form @submit.prevent="setInfoTeacher" class="login-form">
                     <v-flex xs12>
-                      <input type="text" id="name" placeholder="Ваше имя" v-model="name" class="login-form-input">
-                      <input type="text" id="surname" placeholder="Ваше фамилия" v-model="name" class="login-form-input">
-                      <input type="email" id="email"  placeholder="Укажите электронную почту" v-model="name" class="login-form-input">
-                      <input type="password" id="password" placeholder="Введите пароль" v-model="name" class="login-form-input">
-                      <input type="number" id="age" placeholder="Укажите  полный Ваш возраст" v-model="name" class="login-form-input">
+                      <input type="text" id="name" placeholder="Ваше имя" v-model="firstName" class="login-form-input">
+                      <input type="text" id="surname" placeholder="Ваше фамилия" v-model="lastName" class="login-form-input">
+                      <input type="email" id="email"  placeholder="Укажите электронную почту" v-model="email" class="login-form-input">
+                      <input type="password" id="password" placeholder="Введите пароль" v-model="password" class="login-form-input">
+                      <input type="number" id="age" placeholder="Укажите  полный Ваш возраст" v-model="age" class="login-form-input">
                       <v-radio-group v-model="row" row class="my-radio">
-                        <v-radio label="Мужской" value="radio-1" class="my-radio"></v-radio>
-                        <v-radio label="Женский" value="radio-2" class="my-radio"></v-radio>
+                        <v-radio label="Мужской" value="radio-1" class="my-radio" v-model="male"></v-radio>
+                        <v-radio label="Женский" value="radio-2" class="my-radio" v-model="female"></v-radio>
                       </v-radio-group>
                     </v-flex>
                   </form>
@@ -35,9 +35,12 @@
             <v-stepper-content step="2">
               <v-card class="stepper-card">
                 <v-flex xs9 offset-3>
-                  <form @submit.prevent="signIn" class="login-form">
-                    <v-flex xs12>
+                  <form @submit.prevent="setInfoTeacher" class="login-form">
+                    <v-flex xs12 sm-8 md-6 lg-10>
                       <input type="text" id="formalBack" placeholder="Укажите формальное образование "  v-model="formalBack" class="login-form-input">
+                    </v-flex>
+                    <v-flex xs12>
+                      <select-filter></select-filter>
                     </v-flex>
                     <v-textarea class="my-textarea" v-model="bio" auto-grow  box  color="white" label="Bio"  rows="1"></v-textarea>
                     <v-textarea class="my-textarea"  v-model="quality" auto-grow box color="white" label="Опыт и квалификация" rows="1" ></v-textarea>
@@ -52,11 +55,11 @@
             <v-stepper-content step="3">
               <v-card class="stepper-card">
                 <v-flex xs10 offset-2>
-                  <form @submit.prevent="signIn" class="login-form">
+                  <form @submit.prevent="setInfoTeacher" class="login-form">
                     <v-flex xs12>
                       <input  type="tel"  id="tel"  placeholder="Ваш номер для связи +996" v-model="phone" class="login-form-input">
                       <v-textarea class="my-textarea"  v-model="quality" auto-grow box color="white" label="Дополнительная информация" rows="1" ></v-textarea>
-                     <v-text-field class="my-textarea"  box label="Ваше местонахождение" prepend-inner-icon="place"></v-text-field>
+                     <v-text-field class="my-textarea" v-model="location" box label="Ваше местонахождение" prepend-inner-icon="place"></v-text-field>
                     </v-flex>
                     <v-flex class="my-avatar">
                       <div class="avatar-wrapper">
@@ -71,7 +74,7 @@
                 </v-flex>
               </v-card>
               <v-btn @click="e1 = 2" class="login-form-btn">Назад</v-btn>
-              <v-btn @click="e1 = 1" class="login-form-btn">Сохранить</v-btn>
+              <v-btn type ="submit" class="login-form-btn">Сохранить</v-btn>
             </v-stepper-content>
           </v-stepper-items>
         </v-stepper>
@@ -81,13 +84,21 @@
 </template>
 
 <script>
+import SelectFilter from '../components/SelectFilter'
 export default {
   name: 'steppers',
+  components: {
+    SelectFilter
+  },
   data() {
     return {
-      name: '',
-      surname: '',
+      firstName: '',
+      lastName: '',
+      email: '',
+      password: '',
       age: null,
+      male: '',
+      female: '',
       e1: 0,
       column: null,
       row: null,
@@ -97,7 +108,13 @@ export default {
       shortInfo: '',
       formalBack: '',
       phone: '',
-      addedInfo: ''
+      addedInfo: '',
+      location: ''
+    }
+  },
+  methods: {
+    setInfoTeacher () {
+      this.$store.dispatch('SET_TEACHER_INFO', this.$data)
     }
   }
 }
@@ -148,7 +165,7 @@ export default {
   border: 1px solid grey;
   outline: none;
   color: white;
-  box-shadow: 2px 8px 32px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 4px 8px -0.4px rgba(0, 0, 0, 0.75);
   margin: 3%;
 }
 ::placeholder {
@@ -189,13 +206,14 @@ export default {
 .stepper-page-box {
   background: rgba(212, 208, 208, 0.7);
   border-radius: 20px;
+  height: 550px
 }
 .stepper-card {
-  width: 800px;
   height: 100%;
   background: rgba(82, 80, 80, 0.1);
   color: white;
 }
+
 .my-textarea {
   border-radius: 5px;
   font-size: 14px;
@@ -210,8 +228,8 @@ label {
 }
  .avatar-wrapper {
     position: relative;
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     margin: 50px auto;
     border-radius: 50%;
     overflow: hidden;

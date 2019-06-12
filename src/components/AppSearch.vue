@@ -1,16 +1,35 @@
 <template>
-  <form class="subject-search">
+  <div>
     <label for="subject-name" class="label-text">Напишите что Вы ищете?</label>
-    <br>
-    <input type="search" name="subject" id="subject" class="subject" placeholder="английский">
-    <button class="search-my-button" type>Найти</button>
-  </form>
+    <br />
+    <input class="subject" placeholder="английский" v-model="q" />
+    <button @click="goToTeachersList" class="search-my-button">
+      Найти
+    </button>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'app-search'
-}
+  name: "app-search",
+  data() {
+    return {
+      q: ""
+    };
+  },
+  methods: {
+    goToTeachersList() {
+      if (this.q) {
+        this.$router.push({
+          name: "teachers-page",
+          query: {
+            q: this.q
+          }
+        });
+      }
+    }
+  }
+};
 </script>
 
 <style scoped>

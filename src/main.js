@@ -13,6 +13,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'vue-select/dist/vue-select.css'
 import vSelect from 'vue-select'
+import VueSync from 'vue-sync'
 
 Vue.component('v-select', vSelect)
 
@@ -20,6 +21,7 @@ Vue.component('v-select', vSelect)
 // Vue.use(VueAxios, axios)
 
 Vue.use(Vuex)
+Vue.use(VueSync)
 Vue.use(BootstrapVue)
 Vue.use(Vuetify, {
   theme: {
