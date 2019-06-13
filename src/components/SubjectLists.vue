@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="row">
+    <div class="row my-list">
       <div class="col-10 offset-2 listparent">
         <div class="row">
           <router-link
@@ -9,7 +9,7 @@
             :key="index"
             :to="subject.route"
           >
-            <h5 class="title">{{subject.name}}</h5>
+            <h5 class="title">{{ subject.name }}</h5>
           </router-link>
         </div>
       </div>
@@ -19,11 +19,11 @@
 
 <script>
 export default {
-  name: 'subjects-lists',
+  name: "subjects-lists",
   props: {
     subjects: Array
   }
-}
+};
 </script>
 
 <style scoped>
@@ -31,8 +31,8 @@ export default {
   margin-top: -10%;
 }
 .subject-list {
-  width: 70px;
-  height: 40px;
+  width: 95px;
+  height: 65px;
   display: flex;
   align-items: center;
   text-align: center;
@@ -52,5 +52,17 @@ export default {
   font-family: "Montserrat", sans-serif;
   font-weight: inherit;
   color: white;
+}
+@media only screen and (min-width: 150px) and (max-width: 670px) {
+  .my-list {
+    display: block;
+  }
+  .listparent {
+    margin-top: -50%;
+  }
+  .subject-list {
+    width: 300px;
+    height: 60px;
+  }
 }
 </style>

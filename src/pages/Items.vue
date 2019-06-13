@@ -1,6 +1,6 @@
 <template>
   <div>
-    <app-header/>
+    <app-header />
     <div class="container- fluid list">
       <teachers-list :items="currentItems"></teachers-list>
     </div>

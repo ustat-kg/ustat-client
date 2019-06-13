@@ -1,24 +1,23 @@
 <template>
-<div class="app-login">
-  <app-login-form />
-</div>
-
- </template>
+  <div class="app-login">
+    <app-login-form />
+  </div>
+</template>
 
 <script>
-import AppLoginForm from '../components/AppLoginForm'
+import AppLoginForm from "../components/AppLoginForm";
 
 export default {
-  name: 'app-login',
+  name: "app-login",
   components: {
     AppLoginForm
   }
-}
+};
 </script>
 
 <style scoped>
 .app-login {
-  background-image: url('../assets/images/bg.png');
+  background-image: url("../assets/images/bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -33,12 +32,9 @@ export default {
   position: relative;
   /* filter: blur(3px) */
 }
-@media only screen
-  and (min-width : 150px)
-  and (max-width : 670px) {
-    background-image {
-      width: 290px;
-    }
+@media only screen and (min-width: 150px) and (max-width: 670px) {
+  background-image {
+    width: 290px;
   }
-
+}
 </style>

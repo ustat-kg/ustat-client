@@ -68,4 +68,20 @@ export default {
   letter-spacing: 0.1cm;
   margin-left: -4px;
 }
+@media only screen and (min-width: 150px) and (max-width: 670px) {
+  .subject {
+    width: 190px;
+    margin-left: -90px;
+    height: 35px;
+  }
+
+  .search-my-button {
+    width: 70px;
+    height: 34px;
+  }
+  .label-text {
+    color: white;
+    margin-left: -50px;
+  }
+}
 </style>

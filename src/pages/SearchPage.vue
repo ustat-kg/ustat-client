@@ -1,44 +1,45 @@
 <template>
-  <div>
-    <app-header/>
+  <div class="search">
+    <app-header />
     <div class="container-fluid search-page">
       <div class="row content-box">
         <div class="col-8 offset-2">
-          <h1 class="main-text">Легко и быстро находите нужного Вам человека для обучения</h1>
+          <h1 class="main-text">
+            Легко и быстро находите нужного Вам человека для обучения
+          </h1>
         </div>
       </div>
       <div class="row">
         <div class="col-6 offset-4 md-8 sm-10 xs-12">
-          <app-search/>
+          <app-search />
         </div>
       </div>
     </div>
-    <app-subjects/>
-    <div class='my-footer'>
+    <app-subjects />
+    <div class="my-footer">
       <app-footer />
     </div>
   </div>
 </template>
 
 <script>
-import AppHeader from '../components/AppHeader'
-import AppSubjects from '../components/AppSubjects'
-import AppSearch from '../components/AppSearch'
-import AppFooter from '../components/AppFooter'
+import AppHeader from "../components/AppHeader";
+import AppSubjects from "../components/AppSubjects";
+import AppSearch from "../components/AppSearch";
+import AppFooter from "../components/AppFooter";
 
 export default {
-  name: 'search-page',
+  name: "search-page",
   components: {
     AppHeader,
     AppSubjects,
     AppSearch,
     AppFooter
-
   },
   data() {
-    return {}
+    return {};
   }
-}
+};
 </script>
 
 <style scoped>
@@ -47,9 +48,11 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 250px 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .content-box {
@@ -102,5 +105,29 @@ export default {
 }
 .my-footer {
   margin-top: 20%;
+}
+
+@media only screen and (min-width: 150px) and (max-width: 670px) {
+  .main-text {
+    font-size: 30px;
+  }
+  .search-page {
+    background-image: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .search {
+    padding: 0px;
+    margin: 0px;
+  }
+  .content-box-down {
+    margin-left: 0px;
+  }
 }
 </style>

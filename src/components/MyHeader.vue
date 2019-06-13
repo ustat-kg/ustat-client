@@ -1,63 +1,64 @@
 <template>
   <div>
-   <v-container fluid>
-         <v-navigation-drawer absolute temporary v-model="drawer" class="hidden-md-and-up">
-      <v-list>
-        <v-list-tile v-for="(item,i) in menuItems" :key="`navdrawer${i}`">
-          <v-list-tile-content>
-            <v-list-tile v-text="item.title"></v-list-tile>
-          </v-list-tile-content>
-        </v-list-tile>
-      </v-list>
-
-    </v-navigation-drawer>
-    <v-toolbar>
-      <v-toolbar-side-icon @click.stop="drawer= !drawer" class="hidden-md-and-up"></v-toolbar-side-icon>
-      <router-link to="/" tag="span" style="cursor:pointer">
-        <v-toolbar-title v-text="'USTAT'"></v-toolbar-title>
-      </router-link>
-
-    </v-toolbar>
-   </v-container>
+    <v-container fluid>
+      <v-navigation-drawer
+        absolute
+        temporary
+        v-model="drawer"
+        class="hidden-md-and-up"
+      >
+        <v-list>
+          <v-list-tile v-for="(item, i) in menuItems" :key="`navdrawer${i}`">
+            <v-list-tile-content>
+              <v-list-tile v-text="item.title"></v-list-tile>
+            </v-list-tile-content>
+          </v-list-tile>
+        </v-list>
+      </v-navigation-drawer>
+      <v-toolbar>
+        <v-toolbar-side-icon
+          @click.stop="drawer = !drawer"
+          class="hidden-md-and-up"
+        ></v-toolbar-side-icon>
+        <router-link to="/" tag="span" style="cursor:pointer">
+          <v-toolbar-title v-text="'USTAT'"></v-toolbar-title>
+        </router-link>
+      </v-toolbar>
+    </v-container>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'my-header',
+  name: "my-header",
   data() {
     return {
       drawer: false
-    }
+    };
   },
   computed: {
     menuItems() {
       return [
         {
-
-          title: 'Стать репетитором',
-          route: '/login'
+          title: "Стать репетитором",
+          route: "/login"
         },
         {
-
-          title: 'Найти репетитора',
-          route: '/signup'
+          title: "Найти репетитора",
+          route: "/signup"
         },
         {
-
-          title: 'Зарегистрироваться',
-          route: '/signup'
+          title: "Зарегистрироваться",
+          route: "/signup"
         },
         {
-
-          title: 'Войти',
-          route: '/signup'
+          title: "Войти",
+          route: "/signup"
         }
-
-      ]
+      ];
     }
   }
-}
+};
 </script>
 <style scoped>
 @import url(https://fonts.googleapis.com/css?family=Montserrat);

@@ -1,20 +1,15 @@
 <template>
-  <div>
-
-  </div>
+  <div></div>
 </template>
 
 <script>
 export default {
   props: {
-    'quaification': {
+    quaification: {
       type: Object
     }
   }
-
-}
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

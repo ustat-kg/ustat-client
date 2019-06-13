@@ -3,10 +3,7 @@
     <v-subheader>Min and max range slider</v-subheader>
     <v-card-text>
       <v-layout row>
-        <v-flex
-          shrink
-          style="width: 60px"
-        >
+        <v-flex shrink style="width: 60px">
           <v-text-field
             v-model="range[0]"
             class="mt-0"
@@ -22,11 +19,9 @@
             :min="min"
           ></v-range-slider>
         </v-flex>
-        <v-flex
-          shrink
-          style="width: 60px"
-        >
-          <v-text-field   v-model="range[1]"
+        <v-flex shrink style="width: 60px">
+          <v-text-field
+            v-model="range[1]"
             class="mt-0"
             hide-details
             single-line
@@ -40,18 +35,16 @@
 
 <script>
 export default {
-  name: 'range-filter',
-  data () {
+  name: "range-filter",
+  data() {
     return {
       min: -50,
       max: 90,
       slider: 40,
       range: [-20, 70]
-    }
+    };
   }
-}
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -5,15 +5,13 @@
 </template>
 
 <script>
-import AppSearch from '../components/AppSearch'
+import AppSearch from "../components/AppSearch";
 export default {
-  name: 'langsubjects',
+  name: "langsubjects",
   components: {
     AppSearch
   }
-}
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

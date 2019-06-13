@@ -15,6 +15,8 @@ import Connect from "../components/Connect.vue";
 import Rating from "../components/Rating.vue";
 import AppValue from "../components/AppValue.vue";
 import Review from "../components/Review.vue";
+import AppSubjects from "../components/AppSubjects.vue";
+import Customize from "../components/Customize.vue";
 Vue.use(Router);
 
 export default new Router({
@@ -96,6 +98,16 @@ export default new Router({
       path: "/review",
       name: "review",
       component: Review
+    },
+    {
+      path: "/app-subjects",
+      name: "app-subjects",
+      component: AppSubjects
+    },
+    {
+      path: "/customize",
+      name: "customize",
+      component: Customize
     }
   ]
 });

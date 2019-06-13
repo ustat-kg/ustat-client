@@ -3,26 +3,26 @@
     <div class="container">
       <div class="row my-header-down">
         <div class="col-2 col-sm-4 col-md-4 col-lg-2">
-         <router-link to="/" tag="span" style="cursor:pointer">
+          <router-link to="/" tag="span" style="cursor:pointer">
             <div class="logo">
-            <h3>USTAT</h3>
-          </div>
-         </router-link>
+              <h3>USTAT</h3>
+            </div>
+          </router-link>
         </div>
-         <div class="col-8 col-sm-4- col-md-4 col-lg-8 center">
-            <router-link
+        <div class="col-8 col-sm-4- col-md-4 col-lg-8 center">
+          <router-link
             class="menu-list"
             v-for="(menuList, index) in menuLists"
             :key="index"
             :to="menuList.route"
           >
-            <h6 class="title">{{menuList.name}}</h6>
+            <h6 class="title">{{ menuList.name }}</h6>
           </router-link>
-         </div>
+        </div>
         <div class="col-2 col-sm-4 col-md-4 col-lg-2">
           <div class="login">
             <li>
-              <a href="#">Регистрация</a>
+              <router-link to="/signup-page">Регистрация</router-link>
             </li>
             <li>
               <router-link to="/app-login">Войти</router-link>
@@ -36,32 +36,32 @@
 
 <script>
 export default {
-  name: 'app-header',
+  name: "app-header",
   data() {
     return {
       menuLists: [
         {
-          name: 'Все направления',
-          route: '/all-subjects'
+          name: "Все направления",
+          route: "/app-subjects"
         },
         {
-          name: 'Найти репетитора',
-          route: '/search-page'
+          name: "Найти репетитора",
+          route: "/customize"
         },
         {
-          name: 'Стать репетитором',
-          route: '/steppers'
+          name: "Стать репетитором",
+          route: "/steppers"
         }
       ]
-    }
+    };
   }
-}
+};
 </script>
 
 <style scoped>
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif !important;
 }
 .my-header {
   height: 80px;
@@ -69,7 +69,6 @@ body {
   background-color: black;
   width: 100%;
   position: absolute;
-
 }
 .my-header-down {
   width: 100%;
@@ -138,4 +137,20 @@ a:hover:after {
   left: 0;
 }
 
+@media only screen and (min-width: 150px) and (max-width: 670px) {
+  .login {
+    margin-left: -150px;
+  }
+
+  .menu-list {
+    list-style-type: none;
+    display: block;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    color: grey;
+    flex-direction: row;
+    display: none;
+  }
+}
 </style>

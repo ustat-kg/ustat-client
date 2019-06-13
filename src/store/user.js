@@ -1,11 +1,11 @@
-import axios from 'axios'
+import axios from "axios";
 import {
   SIGNIN_URL,
   SIGNUP_URL,
   SET_TEACHER_RATING_URL,
-  SET_TEACHER_REVIEW_URL,
+  // SET_TEACHER_REVIEW_URL,
   SET_TEACHER_INFO_URL
-} from '../config/urls'
+} from "../config/urls";
 export default {
   state: {
     user: {
@@ -15,16 +15,16 @@ export default {
   },
   mutations: {
     SET_USER(state, payload) {
-      state.user.isAuthenticated = true
-      state.user.userId = payload
+      state.user.isAuthenticated = true;
+      state.user.userId = payload;
     },
     auth_request(state, payload) {
-      state.user.isAuthenticated = true
-      state.user.userId = payload
+      state.user.isAuthenticated = true;
+      state.user.userId = payload;
     },
     SET_ERROR(state, payload) {
-      state.user.isAuthenticated = true
-      state.user.userId = payload
+      state.user.isAuthenticated = true;
+      state.user.userId = payload;
     },
     TEACHER_RATING(state, payload) {
       // Vue.set(state.users[payload.userId], 'rating', payload.rating)
@@ -37,137 +37,124 @@ export default {
     }
   },
   actions: {
-    SIGNUP({
-      commit
-    }, user) {
-      console.log(user)
+    SIGNUP({ commit }, user) {
+      console.log(user);
       return new Promise((resolve, reject) => {
-        commit('auth_request')
+        commit("auth_request");
         axios({
           url: SIGNUP_URL,
           data: user,
-          method: 'POST'
+          method: "POST"
         })
           .then(resp => {
-            const token = resp.data.token
-            const user = resp.data.user
-            localStorage.setItem('token', token)
-            axios.defaults.headers.common['Authorization'] = token
-            commit('auth_request', token, user)
-            resolve(resp)
+            const token = resp.data.token;
+            const user = resp.data.user;
+            localStorage.setItem("token", token);
+            axios.defaults.headers.common["Authorization"] = token;
+            commit("auth_request", token, user);
+            resolve(resp);
           })
           .catch(err => {
-            commit('SET_ERROR', err)
-            localStorage.removeItem('token')
-            reject(err)
-          })
-      })
+            commit("SET_ERROR", err);
+            localStorage.removeItem("token");
+            reject(err);
+          });
+      });
     },
-    SIGNIN({
-      commit
-    }, user) {
+    SIGNIN({ commit }, user) {
       return new Promise((resolve, reject) => {
-        commit('auth_request')
+        commit("auth_request");
         axios({
           url: SIGNIN_URL,
           data: user,
-          method: 'GET'
+          method: "GET"
         })
           .then(resp => {
-            const token = resp.data.token
-            const user = resp.data.user
-            localStorage.setItem('token', token)
-            axios.defaults.headers.common['Authorization'] = token
-            commit('GET_USER', token, user)
-            resolve(resp)
+            const token = resp.data.token;
+            const user = resp.data.user;
+            localStorage.setItem("token", token);
+            axios.defaults.headers.common["Authorization"] = token;
+            commit("GET_USER", token, user);
+            resolve(resp);
           })
           .catch(err => {
-            commit('SET_ERROR', err)
-            localStorage.removeItem('token')
-            reject(err)
-          })
-      })
+            commit("SET_ERROR", err);
+            localStorage.removeItem("token");
+            reject(err);
+          });
+      });
     },
-    SET_TEACHER_RATING({
-      commit,
-      getters
-    }, payload) {
+    SET_TEACHER_RATING({ commit, getters }, payload) {
       //  [`users.${payload.userId}.rating`] payload.rating
       return new Promise((resolve, reject) => {
-        commit('TEACHER_RATING')
+        commit("TEACHER_RATING");
         axios({
           url: SET_TEACHER_RATING_URL,
           // data: user,
-          method: 'POST'
+          method: "POST"
         })
           .then(resp => {
-            const token = resp.data.token
-            const user = resp.data.user
-            localStorage.setItem('token', token)
-            axios.defaults.headers.common['Authorization'] = token
-            commit('TEACHER_RATING', token, user)
-            resolve(resp)
+            const token = resp.data.token;
+            const user = resp.data.user;
+            localStorage.setItem("token", token);
+            axios.defaults.headers.common["Authorization"] = token;
+            commit("TEACHER_RATING", token, user);
+            resolve(resp);
           })
           .catch(err => {
-            commit('SET_ERROR', err)
-            localStorage.removeItem('token')
-            reject(err)
-          })
-      })
+            commit("SET_ERROR", err);
+            localStorage.removeItem("token");
+            reject(err);
+          });
+      });
     },
-    SET_TEACHER_REVIEW({
-      commit,
-      getters
-    }, payload) {
+    SET_TEACHER_REVIEW({ commit, getters }, payload) {
       //  [`users.${payload.userId}.rating`] payload.rating
       return new Promise((resolve, reject) => {
-        commit('TEACHER_REVIEW')
+        commit("TEACHER_REVIEW");
         axios({
-          url: SET_TEACHER_REVIEW_URL,
+          // url: SET_TEACHER_REVIEW_URL,
           // data: user,
-          method: 'POST'
+          method: "POST"
         })
           .then(resp => {
-            const token = resp.data.token
-            const user = resp.data.user
-            localStorage.setItem('token', token)
-            axios.defaults.headers.common['Authorization'] = token
-            commit('TEACHER_REVIEW', token, user)
-            resolve(resp)
+            const token = resp.data.token;
+            const user = resp.data.user;
+            localStorage.setItem("token", token);
+            axios.defaults.headers.common["Authorization"] = token;
+            commit("TEACHER_REVIEW", token, user);
+            resolve(resp);
           })
           .catch(err => {
-            commit('SET_ERROR', err)
-            localStorage.removeItem('token')
-            reject(err)
-          })
-      })
+            commit("SET_ERROR", err);
+            localStorage.removeItem("token");
+            reject(err);
+          });
+      });
     },
-    SET_TEACHER_INFO({
-      commit,
-      getters
-    }, payload) {
+    SET_TEACHER_INFO({ commit, getters }, payload) {
       //  [`users.${payload.userId}.rating`] payload.rating
       return new Promise((resolve, reject) => {
-        commit('TEACHER_INFO')
+        commit("TEACHER_INFO");
         axios({
           url: SET_TEACHER_INFO_URL,
           // data: user,
-          method: 'POST'
+          method: "POST"
         })
           .then(resp => {
-            const token = resp.data.token
-            const user = resp.data.user
-            localStorage.setItem('token', token)
-            axios.defaults.headers.common['Authorization'] = token
-            commit('TEACHER_INFO', token, user)
-            resolve(resp)
+            const token = resp.data.token;
+            const user = resp.data.user;
+            localStorage.setItem("token", token);
+            axios.defaults.headers.common["Authorization"] = token;
+            commit("TEACHER_INFO", token, user);
+            resolve(resp);
           })
           .catch(err => {
-            commit('SET_ERROR', err)
-            localStorage.removeItem('token')
-            reject(err)
-          })
-      })
+            commit("SET_ERROR", err);
+            localStorage.removeItem("token");
+            reject(err);
+          });
+      });
     }
 
     // logout({ commit }) {
@@ -180,7 +167,6 @@ export default {
     // }
   },
   getters: {
-    isUserAuthenticated: (state) => state.user.isAuthenticated
+    isUserAuthenticated: state => state.user.isAuthenticated
   }
-
-}
+};

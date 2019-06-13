@@ -1,25 +1,25 @@
 <template>
   <div>
-  <app-header/>
+    <app-header />
     <div class="signup-page">
-      <signup/>
+      <signup />
     </div>
   </div>
 </template>
 
 <script>
-import AppSignUp from '../components/AppSignUp'
-import AppHeader from '../components/AppHeader'
+import AppSignUp from "../components/AppSignUp";
+import AppHeader from "../components/AppHeader";
 
-console.log(AppSignUp)
+console.log(AppSignUp);
 
 export default {
-  name: 'signup-page',
+  name: "signup-page",
   components: {
     AppHeader,
     signup: AppSignUp
   }
-}
+};
 </script>
 
 <style scoped>

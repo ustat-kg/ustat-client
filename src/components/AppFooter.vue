@@ -1,8 +1,10 @@
 <template>
-  <v-footer dark height="auto" class='my-footer'>
+  <v-footer dark height="auto" class="my-footer">
     <v-card class="flex" flat tile>
       <v-card-title class="my-teal">
-        <strong class="subheading">Get connected with us on social networks!</strong>
+        <strong class="subheading"
+          >Get connected with us on social networks!</strong
+        >
         <v-spacer></v-spacer>
         <v-btn v-for="icon in icons" :key="icon" class="mx-3" dark icon>
           <v-icon size="24px">{{ icon }}</v-icon>
@@ -18,17 +20,17 @@
 
 <script>
 export default {
-  name: 'app-footer',
+  name: "app-footer",
   data: () => ({
     icons: [
-      'fab fa-facebook',
-      'fab fa-twitter',
-      'fab fa-google-plus',
-      'fab fa-linkedin',
-      'fab fa-instagram'
+      "fab fa-facebook",
+      "fab fa-twitter",
+      "fab fa-google-plus",
+      "fab fa-linkedin",
+      "fab fa-instagram"
     ]
   })
-}
+};
 </script>
 <style scoped>
 /* .my-footer {
@@ -36,10 +38,10 @@ export default {
 
 } */
 .my-teal {
- background-color: #129490;
- opacity: 0.7;
+  background-color: #129490;
+  opacity: 0.7;
 }
 .my-footer {
-  margin-top: 105vh;
+  margin-top: 120vh;
 }
 </style>

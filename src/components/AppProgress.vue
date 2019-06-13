@@ -14,29 +14,29 @@
 
 <script>
 export default {
-  name: 'app-progress',
-  data () {
+  name: "app-progress",
+  data() {
     return {
       interval: {},
       value: 0
-    }
+    };
   },
-  beforeDestroy () {
-    clearInterval(this.interval)
+  beforeDestroy() {
+    clearInterval(this.interval);
   },
-  mounted () {
+  mounted() {
     this.interval = setInterval(() => {
       if (this.value === 100) {
-        return (this.value = 0)
+        return (this.value = 0);
       }
-      this.value += 10
-    }, 1000)
+      this.value += 10;
+    }, 1000);
   }
-}
+};
 </script>
 
 <style scoped>
-  .v-progress-circular {
-    margin: 1rem
-  }
+.v-progress-circular {
+  margin: 1rem;
+}
 </style>

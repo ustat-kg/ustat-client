@@ -1,17 +1,17 @@
 <template>
   <div>
-    <app-header/>
+    <app-header></app-header>
     <div class="container- fluid list">
-      <subject-lists :subjects="currentSubjects"/>
+      <subject-lists :subjects="currentSubjects"></subject-lists>
     </div>
   </div>
 </template>
 
 <script>
-import SubjectLists from '../components/SubjectLists'
-import AppHeader from '../components/AppHeader'
+import SubjectLists from "../components/SubjectLists";
+import AppHeader from "../components/AppHeader";
 export default {
-  name: 'schoolsubjects',
+  name: "schoolsubjects",
   components: {
     SubjectLists,
     AppHeader
@@ -20,80 +20,181 @@ export default {
     return {
       subjects: [
         {
-          name: 'Английский',
-          route: '/teachers-page',
-          category: 'school'
+          name: "Английский",
+          route: "/teachers-page",
+          category: "school"
         },
         {
-          name: 'Кыргызский',
-          route: '/langsubjects',
-          category: 'it'
+          name: "Русский язык",
+          route: "/teachers-page",
+          category: "school"
         },
         {
-          name: 'Турецкий',
-          route: '/artsubjects',
-          category: 'art'
+          name: "Физика",
+          route: "/teachers-page",
+          category: "school"
         },
         {
-          name: 'Русский',
-          route: '/developsubjects-page',
-          category: 'art'
+          name: "Математика",
+          route: "/teachers-page",
+          category: "school"
         },
         {
-          name: '1С-Бухгалтерия',
-          route: '/businesssubjects-page',
-          category: 'development'
+          name: "Биология",
+          route: "/teachers-page",
+          category: "school"
         },
         {
-          name: 'Маркетинг',
-          route: '/itsubjects',
-          category: 'bussines'
+          name: "Геометрия",
+          route: "/teachers-page",
+          category: "school"
         },
         {
-          name: 'SMM',
-          route: '/itsubjects',
-          category: 'it'
+          name: "Кыргызский",
+          route: "/langsubjects",
+          category: "language"
         },
         {
-          name: 'Рисование',
-          route: '/itsubjects',
-          category: 'art'
+          name: "Турецкий",
+          route: "/artsubjects",
+          category: "language"
         },
         {
-          name: 'Python',
-          route: '/itsubjects',
-          category: 'art'
+          name: "Русский",
+          route: "/developsubjects-page",
+          category: "language"
         },
         {
-          name: 'Фотепиано',
-          route: '/itsubjects',
-          category: 'art'
+          name: "1С-Бухгалтерия",
+          route: "/businesssubjects-page",
+          category: "development"
         },
         {
-          name: 'Китайский',
-          route: '/itsubjects',
-          category: 'language'
+          name: "Маркетинг",
+          route: "/itsubjects",
+          category: "bussines"
         },
         {
-          name: 'Вокал',
-          route: '/itsubjects',
-          category: 'art'
+          name: "SMM",
+          route: "/itsubjects",
+          category: "it"
         },
         {
-          name: 'Игра на скрипке',
-          route: '/itsubjects',
-          category: 'art'
+          name: "Рисование",
+          route: "/itsubjects",
+          category: "art"
+        },
+        {
+          name: "Python",
+          route: "/itsubjects",
+          category: "it"
+        },
+        {
+          name: "Java",
+          route: "/itsubjects",
+          category: "it"
+        },
+        {
+          name: "C++",
+          route: "/itsubjects",
+          category: "it"
+        },
+        {
+          name: "Ruby",
+          route: "/itsubjects",
+          category: "it"
+        },
+        {
+          name: "Уроки фортепиано",
+          route: "/itsubjects",
+          category: "art"
+        },
+        {
+          name: "Китайский",
+          route: "/itsubjects",
+          category: "language"
+        },
+        {
+          name: "Вокал",
+          route: "/itsubjects",
+          category: "art"
+        },
+        {
+          name: "Макраме",
+          route: "/itsubjects",
+          category: "art"
+        },
+        {
+          name: "Курсы икебана",
+          route: "/itsubjects",
+          category: "art"
+        },
+        {
+          name: "Кулинария",
+          route: "/itsubjects",
+          category: "art"
+        },
+        {
+          name: "Танцы",
+          route: "/itsubjects",
+          category: "art"
+        },
+        {
+          name: "Игра на скрипке",
+          route: "/itsubjects",
+          category: "art"
+        },
+        {
+          name: "Уроки MS Office",
+          route: "/itsubjects",
+          category: "development"
+        },
+        {
+          name: "Налогооблажение",
+          route: "/itsubjects",
+          category: "development"
+        },
+        {
+          name: "SCRUM AGILE",
+          route: "/itsubjects",
+          category: "development"
+        },
+        {
+          name: "Современные коммуникационные технологии",
+          route: "/itsubjects",
+          category: "bussines"
+        },
+        {
+          name: "Эффективное управление персоналом",
+          route: "/itsubjects",
+          category: "bussines"
+        },
+        {
+          name: "Менеджмент организации",
+          route: "/itsubjects",
+          category: "bussines"
+        },
+        {
+          name: "Развитие стратегического мышления",
+          route: "/itsubjects",
+          category: "bussines"
+        },
+        {
+          name: "Бизнес-анализ",
+          route: "/itsubjects",
+          category: "bussines"
         }
       ]
-    }
+    };
   },
   computed: {
-    currentSubjects(){
-      return this.subjects.filter(s => s.category === this.$route.params.subject_slug)
+    currentSubjects() {
+      return this.subjects.filter(
+        s => s.category === this.$route.params.subject_slug
+      );
     }
-
   }
-}
+};
 </script>
 
 <style>
